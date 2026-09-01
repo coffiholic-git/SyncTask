@@ -1,4 +1,4 @@
-const API = 'http://localhost:8081';
+const API = '';
 const state = { token: localStorage.getItem('synctask_token'), user: JSON.parse(localStorage.getItem('synctask_user') || 'null'), project: null, projects: [] };
 const $ = s => document.querySelector(s);
 const esc = value => { const el = document.createElement('span'); el.textContent = value || ''; return el.innerHTML; };
