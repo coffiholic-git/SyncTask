@@ -68,6 +68,7 @@ public class SecurityConfig {
             .requestMatchers("/api/auth/**").permitAll()
             .requestMatchers("/api/users/me").authenticated()
             .requestMatchers(HttpMethod.GET, "/api/users/*").hasRole("ADMIN")
+                               .requestMatchers("/", "/index.html", "/app.js", "/app.css").permitAll()
             .anyRequest().authenticated())
         .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
         .build();
