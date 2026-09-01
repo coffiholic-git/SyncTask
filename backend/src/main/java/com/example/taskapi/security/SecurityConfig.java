@@ -43,6 +43,7 @@ public class SecurityConfig {
     config.setAllowedOriginPatterns(List.of(
         "http://localhost:*",
         "http://127.0.0.1:*",
+      "https://*.up.railway.app",
         "https://*.lovable.app",
         "https://*.lovableproject.com"
     ));
